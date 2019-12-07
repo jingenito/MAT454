@@ -8,11 +8,11 @@ for i=1:length(r)
     x(i,2) = 0;
 
     for j=1:300
-        x(i,2) = r(i)*sin(pi*x(i,1)); %only going to plot the last 500 iterates after the transients settle 
+        x(i,2) = r(i)*sin(pi*x(i,1)); %only going to plot the last 300 iterates after the transients settle 
         x(i,1) = x(i,2); %set x1 to the previous term
     end
     
-    for j=301:6000
+    for j=301:600
         k = j-300;
         x(i,k+1) = r(i)*sin(pi*x(i,k));
     end
